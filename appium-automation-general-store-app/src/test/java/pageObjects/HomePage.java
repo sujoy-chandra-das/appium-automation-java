@@ -21,14 +21,4 @@ public class HomePage {
     @AndroidFindBy(xpath = "//*[@text='Female']")
     public WebElement femaleButton;
 
-
-    @AndroidFindBy(id="android:id/text1")
-    public WebElement dropDownClick;
-
-    @AndroidFindBy(xpath ="//*[@text='Bangladesh']")
-    public WebElement chooseCountryBangladesh;
-
-    @AndroidFindBy(id="com.androidsample.generalstore:id/btnLetsShop")
-    public WebElement letsShop;
-
 }
