@@ -31,6 +31,7 @@ public class Base {
         driver = new AndroidDriver(new URL(appiumServerUrl), dc);
     }
 
+
     @AfterTest // Close the session
     public void close() {
         if (driver != null) {
