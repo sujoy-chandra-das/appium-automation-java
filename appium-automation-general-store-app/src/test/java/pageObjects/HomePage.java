@@ -11,6 +11,7 @@ public class HomePage {
 
     public HomePage(AppiumDriver driver)
     {
+
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
