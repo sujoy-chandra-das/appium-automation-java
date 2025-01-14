@@ -12,7 +12,7 @@ public class testing extends Base {
 
     HomePage hp = new HomePage(driver);
 
-    hp.nameField.sendKeys("Hasan al mamun");
+    hp.getNameField().sendKeys("Hasan al mamun");
     Thread.sleep(5000);
 
 

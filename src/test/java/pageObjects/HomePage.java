@@ -1,26 +1,27 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+
+import base.Locators;
 
 public class HomePage {
 
-    public HomePage(AppiumDriver driver)
-    {
+    private AppiumDriver driver;
+    Locators locators = new Locators();
 
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    public HomePage(AppiumDriver driver) {
+        this.driver = driver;
     }
 
+    // Dynamically fetch locators from the Locators class
+    public WebElement getNameField() {
+        return driver.findElement(By.id(Locators.text_box_NameId));
+    }
 
-    @AndroidFindBy(id="com.androidsample.generalstore:id/nameField")
-    public WebElement nameField;
-
-    @AndroidFindBy(xpath = "//*[@text='Female']")
-    public WebElement femaleButton;
-
-
+    public WebElement getFemaleButton() {
+        return driver.findElement(By.xpath(Locators.checkbox_Gender_Xpath));
+    }
 }
