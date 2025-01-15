@@ -33,6 +33,14 @@ public class ProductsPage {
 
     public WebElement getLetsShopButton() {
         return driver.findElement(By.id(Locators.Button_LetsShop_Id));
+
+
+    }
+
+    public WebElement ProductsTitleAppear() {
+        return driver.findElement(By.id(Locators.title_ProductsId));
+
+
     }
 
 }

@@ -10,5 +10,6 @@ public class Locators {
 
 
     public static String element_CountryXpath = "//div[@class='_highlighter-box_88g86_381' and @style='left: 59.3444px; top: 509.056px; width: 235.2px; height: 59.3444px;']";
+    public static String title_ProductsId = "com.androidsample.generalstore:id/toolbar_title";
 }
 
