@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pageObjects.ProductsPage;
 import org.openqa.selenium.WebElement;
 
-public class ProductPageAppear extends Base {
+public class TestProductPageAppear extends Base {
 
     @Test
     public void ProductPageAppear() throws InterruptedException {

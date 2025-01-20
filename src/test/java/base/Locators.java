@@ -11,5 +11,10 @@ public class Locators {
 
     public static String element_CountryXpath = "//div[@class='_highlighter-box_88g86_381' and @style='left: 59.3444px; top: 509.056px; width: 235.2px; height: 59.3444px;']";
     public static String title_ProductsId = "com.androidsample.generalstore:id/toolbar_title";
+    public static String AddtoCart1_Xpath = "(//android.widget.TextView[@resource-id='com.androidsample.generalstore:id/productAddCart'])[1]";
+    public static String AddtoCart2_Xpath = "(//android.widget.TextView[@resource-id='com.androidsample.generalstore:id/productAddCart'])[2]";
+    public static String Button_Cart_ID= "com.androidsample.generalstore:id/appbar_btn_cart";
+    public static String Title_CartID= "com.androidsample.generalstore:id/toolbar_title";
+
 }
 

@@ -4,7 +4,7 @@ import pageObjects.HomePage;
 import base.Base;
 import org.testng.annotations.Test;
 
-public class HomePageAppear extends Base {
+public class TestHomePageAppear extends Base {
 
     @Test // Test method to run the test
     public void HomepageAppear() throws InterruptedException {
