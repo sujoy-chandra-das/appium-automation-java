@@ -15,6 +15,11 @@ public class Locators {
     public static String AddtoCart2_Xpath = "(//android.widget.TextView[@resource-id='com.androidsample.generalstore:id/productAddCart'])[2]";
     public static String Button_Cart_ID= "com.androidsample.generalstore:id/appbar_btn_cart";
     public static String Title_CartID= "com.androidsample.generalstore:id/toolbar_title";
+    public static String Checkbox_Cart_ClassName= "android.widget.CheckBox";
+    public static String Button_CheckoutId = "com.androidsample.generalstore:id/btnProceed";
+    public static String Title_AfterCheckout_Id = "com.androidsample.generalstore:id/webView";
+    public static String SearchBar_Id = "com.androidsample.generalstore:id/webView";
+
 
 }
 
