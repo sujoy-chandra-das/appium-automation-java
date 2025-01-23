@@ -10,15 +10,14 @@ public class TestProductPageAppear extends Base {
 
     @Test
     public void ProductPageAppear() throws InterruptedException {
-        Thread.sleep(5000); // Wait for the page to load
+//        Thread.sleep(5000); // Wait for the page to load
         ProductsPage pg = new ProductsPage(driver);
 
         // Interact with the Name field
         pg.getNameField().sendKeys("Hasan al mamun");
-        Thread.sleep(5000); // Wait for any action to take effect
 
         pg.getLetsShopButton().click();
-        Thread.sleep(3000);
+
 
 
         WebElement pageTitleElement = pg.ProductsTitleAppear();
@@ -37,7 +36,7 @@ public class TestProductPageAppear extends Base {
         Assert.assertEquals(actualTitle, expectedTitle, "Title does not match!");
         System.out.println("Title assertion passed!");
 
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
     }
 }
 

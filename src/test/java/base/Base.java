@@ -1,17 +1,23 @@
 package base;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class Base {
 
     public AndroidDriver driver;
+    public WebDriverWait wait;
 
     @BeforeTest // Open the session
     public void setup() throws MalformedURLException {
@@ -26,11 +32,12 @@ public class Base {
         dc.setCapability("appium:app", apkPath);
         // Uncomment the following line if you want to auto-grant permissions
         // dc.setCapability("autoGrantPermissions", true);
-        // dc.setCapability("autoGrantPermissions", true);
 
         driver = new AndroidDriver(new URL(appiumServerUrl), dc);
-    }
 
+        // Initialize WebDriverWait with a default timeout of 20 seconds
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    }
 
     @AfterTest // Close the session
     public void close() {

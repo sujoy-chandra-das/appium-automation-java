@@ -10,7 +10,6 @@ public class TestHomePageAppear extends Base {
     public void HomepageAppear() throws InterruptedException {
 
         HomePage hp = new HomePage(driver);
-        Thread.sleep(10000); // Wait for the page to load
 
 
         // Check if the Name field is visible
@@ -23,7 +22,7 @@ public class TestHomePageAppear extends Base {
 
         // Interact with the Name field
         hp.getNameField().sendKeys("Hasan al mamun");
-        Thread.sleep(5000); // Wait for any action to take effect
+        Thread.sleep(2000); // Wait for any action to take effect
     }
 
 

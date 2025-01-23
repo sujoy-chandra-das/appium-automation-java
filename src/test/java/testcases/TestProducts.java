@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.ProductsAdd;
 
+
 public class TestProducts extends Base {
 
     @Test
@@ -15,20 +16,10 @@ public class TestProducts extends Base {
 
         // Interact with the Name field
         pg.getNameField().sendKeys("Hasan al mamun");
-        Thread.sleep(5000); // Wait for any action to take effect
-
         pg.getLetsShopButton().click();
-        Thread.sleep(3000);
-
         pg.ClickAddToCart1().click();
-        Thread.sleep(3000);
-
         pg.ClickAddToCart2().click();
-        Thread.sleep(3000);
-
-
         pg.ClickCartButton().click();
-        Thread.sleep(3000);
 
         WebElement pageTitleElement = pg.CartTitleAppear();
         // Fetch and print the title of the Products page
@@ -46,8 +37,8 @@ public class TestProducts extends Base {
         Assert.assertEquals(actualTitle, expectedTitle, "Title does not match!");
         System.out.println("Title assertion passed!");
 
-        Thread.sleep(3000);
 
+        Thread.sleep(3000);
 
 
     }

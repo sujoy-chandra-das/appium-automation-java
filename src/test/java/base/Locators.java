@@ -20,6 +20,5 @@ public class Locators {
     public static String Title_AfterCheckout_Id = "com.androidsample.generalstore:id/webView";
     public static String SearchBar_Id = "com.androidsample.generalstore:id/webView";
 
-
 }
 
