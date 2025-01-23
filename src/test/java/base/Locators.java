@@ -19,6 +19,9 @@ public class Locators {
     public static String Button_CheckoutId = "com.androidsample.generalstore:id/btnProceed";
     public static String Title_AfterCheckout_Id = "com.androidsample.generalstore:id/webView";
     public static String SearchBar_Id = "com.androidsample.generalstore:id/webView";
+    public static String Cart1Display_xpath ="//android.widget.TextView[@resource-id=\"com.androidsample.generalstore:id/productName\" and @text=\"Air Jordan 4 Retro\"]";
+    public static String Cart2Display_xpath ="//android.widget.TextView[@resource-id=\"com.androidsample.generalstore:id/productName\" and @text=\"Air Jordan 1 Mid SE\"]";
+
 
 }
 
