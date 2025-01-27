@@ -11,6 +11,9 @@ public class TestHomePageAppear extends Base {
 
         HomePage hp = new HomePage(driver);
 
+        // Interact with the Name field
+        hp.getNameField().sendKeys("Hasan al mamun");
+        Thread.sleep(2000); // Wait for any action to take effect
 
         // Check if the Name field is visible
         if (hp.getNameField().isDisplayed()) {
@@ -19,10 +22,6 @@ public class TestHomePageAppear extends Base {
             System.out.println("getNameField is not visible");
         }
 
-
-        // Interact with the Name field
-        hp.getNameField().sendKeys("Hasan al mamun");
-        Thread.sleep(2000); // Wait for any action to take effect
     }
 
 

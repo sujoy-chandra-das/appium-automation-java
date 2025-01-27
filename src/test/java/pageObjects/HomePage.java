@@ -14,7 +14,6 @@ public class HomePage {
 
     public AndroidDriver driver;
     public WebDriverWait wait;
-    Locators locators = new Locators();
 
     // Constructor to initialize driver and wait
     public HomePage(AppiumDriver driver) {

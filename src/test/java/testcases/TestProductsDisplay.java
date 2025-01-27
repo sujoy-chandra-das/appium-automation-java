@@ -23,19 +23,25 @@ public class TestProductsDisplay extends Base {
 
         // Interact with the Name field
         productsDisplay.getNameField().sendKeys("Hasan al mamun");
-        Thread.sleep(5000); // Wait for any action to take effect
 
         productsDisplay.getLetsShopButton().click(); // click the letshop button
-        Thread.sleep(3000);
 
         productsDisplay.ClickAddToCart1().click(); // add product 1 to the cart
-        Thread.sleep(3000);
 
         productsDisplay.ClickAddToCart2().click(); // add product 2 to the cart
-        Thread.sleep(3000);
 
         productsDisplay.ClickCheckoutButton().click();
         Thread.sleep(3000);
+
+    }
+
+    @Test
+    public void CheckAddedItemDisplay() throws InterruptedException, IOException {
+
+
+        Checkout(); //Repeat the automated test steps under the Checkout method
+        // Initialize the ProductsDisplay object
+        ProductsDisplay productsDisplay = new ProductsDisplay(driver);
 
         // Take a screenshot after adding products to the cart
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

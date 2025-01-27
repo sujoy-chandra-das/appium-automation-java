@@ -6,53 +6,34 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
 
 import base.Locators;
-import org.xml.sax.Locator;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
+import java.time.Duration;
 
 public class ProductsDisplay extends CartPage {
 
-    Locators locators = new Locators();
+    //Locators locators = new Locators();
+    public WebDriverWait wait;
 
     public ProductsDisplay(AppiumDriver driver) {
-        super(driver); // Call the parent class constructor
+        super(driver);// Call the parent class constructor
+        this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(20));
     }
+       // return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(Locators.dropdown_CountryId)));
 
-    public WebElement ClickCheckBoxX() {
-        return driver.findElement(By.className(Locators.Checkbox_Cart_ClassName));
-    }
 
     public WebElement ClickCheckoutButton() {
-        return driver.findElement(By.id(Locators. Button_Cart_ID));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(Locators.Button_Cart_ID)));
     }
 
-    /// /    public WebElement Cart1Display() {
-    /// /        return driver.findElement(By.id(Locators.Cart1Display_xpath));
-    /// /    }
-    /// /
-    /// /    public WebElement Cart2Display() {
-    /// /        return driver.findElement(By.id(Locators.Cart2Display_xpath));
-    /// /    }
-//
-//    public List<WebElement> getCartItems() {
-//        return (List<WebElement>) driver.findElement(By.xpath(Locators.Cart1Display_xpath));
-//    }
-//
-//    public List<WebElement> getCartItems2() {
-//        return (List<WebElement>) driver.findElement(By.xpath(Locators.Cart2Display_xpath));
-//    }
-//
-// //return driver.findElement(By.xpath(Locators.Cart1Display_xpath)); // Replace with the correct locator
-//
-
-// Method to get CartItems1
     public WebElement getCartItems1() {
-        return driver.findElement(By.xpath(Locators.Cart1Display_xpath)); // Replace with actual locator for CartItems1
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.Cart1Display_xpath)));
     }
 
     // Method to get CartItems2
     public WebElement getCartItems2() {
-        return driver.findElement(By.xpath(Locators.Cart2Display_xpath));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.Cart2Display_xpath)));
 
 
     }

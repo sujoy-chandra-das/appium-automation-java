@@ -16,25 +16,18 @@ public class TestCheckout extends Base {
 
         // Interact with the Name field
         pg.getNameField().sendKeys("Hasan al mamun");
-        Thread.sleep(5000); // Wait for any action to take effect
 
         pg.getLetsShopButton().click();
-        Thread.sleep(3000);
 
         pg.ClickAddToCart1().click();
-        Thread.sleep(3000);
 
         pg.ClickAddToCart2().click();
-        Thread.sleep(3000);
 
         pg.ClickCartButton().click();
-        Thread.sleep(3000);
 
         pg.ClickCheckBoxX().click();
-        Thread.sleep(3000);
 
         pg.ClickCheckoutButton().click();
-        Thread.sleep(3000);
 
         pg.ClickSearchBar().click();
         Thread.sleep(3000);

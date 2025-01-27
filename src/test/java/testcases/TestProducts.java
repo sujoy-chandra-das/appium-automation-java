@@ -10,7 +10,7 @@ import pageObjects.ProductsAdd;
 public class TestProducts extends Base {
 
     @Test
-    public void Products() throws InterruptedException {
+    public void CartPageDisplay() throws InterruptedException {
         Thread.sleep(5000); // Wait for the page to load
         ProductsAdd pg = new ProductsAdd(driver);
 
@@ -20,6 +20,15 @@ public class TestProducts extends Base {
         pg.ClickAddToCart1().click();
         pg.ClickAddToCart2().click();
         pg.ClickCartButton().click();
+        Thread.sleep(3000);
+
+    }
+
+    @Test
+    public void DisplayCartPageTitleGetandAssert() throws InterruptedException {
+
+        CartPageDisplay(); //Repeat the automated test steps under the CartPageDisplay method
+        ProductsAdd pg = new ProductsAdd(driver);
 
         WebElement pageTitleElement = pg.CartTitleAppear();
         // Fetch and print the title of the Products page
