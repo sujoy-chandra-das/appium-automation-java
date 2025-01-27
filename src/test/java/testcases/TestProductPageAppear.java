@@ -17,9 +17,16 @@ public class TestProductPageAppear extends Base {
         pg.getNameField().sendKeys("Hasan al mamun");
 
         pg.getLetsShopButton().click();
+        Thread.sleep(3000);
+    }
 
 
 
+    @Test
+    public void ProductPageAppearTitleGetPrint() throws InterruptedException {
+
+        ProductPageAppear();
+        ProductsPage pg = new ProductsPage(driver);
         WebElement pageTitleElement = pg.ProductsTitleAppear();
         // Fetch and print the title of the Products page
         try {
@@ -36,7 +43,6 @@ public class TestProductPageAppear extends Base {
         Assert.assertEquals(actualTitle, expectedTitle, "Title does not match!");
         System.out.println("Title assertion passed!");
 
-//        Thread.sleep(3000);
     }
 }
 

@@ -48,7 +48,7 @@ public class ProductsPage {
     }
 
     public WebElement ProductsTitleAppear() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(Locators.title_ProductsId)));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locators.title_Products_Xpath)));
 
 
     }
