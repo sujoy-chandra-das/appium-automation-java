@@ -19,6 +19,7 @@ public class ProductsAdd  {
     Locators locators = new Locators();
 
     public ProductsAdd(AppiumDriver driver) {
+
         this.driver = (AndroidDriver) driver;
         this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(20));
     }

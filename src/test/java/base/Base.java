@@ -85,7 +85,7 @@ public class Base {
 
         DesiredCapabilities dc = new DesiredCapabilities();
         dc.setCapability("platformName", "Android");
-        dc.setCapability("appium:automationName", "uiautomator2");
+        dc.setCapability("appium:automationName", "Espresso");
         dc.setCapability("appium:app", apkPath);
         // Uncomment the following line if you want to auto-grant permissions
         // dc.setCapability("autoGrantPermissions", true);
